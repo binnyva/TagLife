@@ -1,0 +1,19 @@
+<div class="container" ng-controller="MainCtrl as MainCtrl"  ng-swipe-left="MainCtrl.nextDay()" ng-swipe-right="MainCtrl.prevDay()">
+<div class="row"><h2>
+<span id="prev-day" ng-click="MainCtrl.prevDay()" class="glyphicon glyphicon-chevron-left"></span>
+<span id="date">{{ MainCtrl.date.format("x") | date:"d MMM, yyyy" }}</span>
+<span id="next-day" ng-click="MainCtrl.nextDay()"  class="glyphicon glyphicon-chevron-right"></span>
+</h2></div>
+
+<div class="row">
+<form id="tags-input" action="">
+<input type="text" name="tags" id="tags" value="{{ MainCtrl.todays_tags }}" />
+</form>
+</div>
+
+<div class="row">
+<ul id="possible-tags">
+</ul>
+</div>
+
+</div>
